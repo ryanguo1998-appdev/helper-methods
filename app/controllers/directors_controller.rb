@@ -20,7 +20,7 @@ class DirectorsController < ApplicationController
   end
 
   def create
-    director_attributes = params.require(:director).permit(:title, :description)
+    director_attributes = params.require(:director).permit(:name, :dob)
     
     @director = Director.new(director_attributes)
 
